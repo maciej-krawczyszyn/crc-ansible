@@ -1,0 +1,14 @@
+---
+- name: "Modyfikacja banera powitalnego"
+  hosts: all
+    
+  tasks:
+    
+  - name: "Dodaj informację o sesji do banera powitalnego"
+    become: yes
+    ansible.builtin.lineinfile:
+      path: /etc/motd
+      line: " -= Witam na sesji z Ansible. Powodzenia! =-"
+      state: present
+...
+
