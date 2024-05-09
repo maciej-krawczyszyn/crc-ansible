@@ -1,0 +1,8 @@
+---
+- name: 'Dostrajanie wybranych systemów'
+  hosts: crc-node0,crc-node1
+  
+  roles:
+    - motd
+...
+

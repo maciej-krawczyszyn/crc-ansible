@@ -1,0 +1,12 @@
+---
+- name: 'Generowanie komunikatu powitalnego z szablonu'
+  become: yes
+  ansible.builtin.template:
+     src: "{{ role_path }}/templates/motd.j2"
+     dest: '/etc/motd'
+     owner: root
+     group: root
+     mode: 0644
+     backup: yes
+...
+
